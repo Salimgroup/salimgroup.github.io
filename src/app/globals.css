@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-obsidian: #050505;
+    --color-charcoal: #121212;
+
+    /* New Palette: Chromatic Purplish Grey & Bronze */
+    --color-chromatic-grey: #BFAEBB;
+    /* Vintage Violet / Light Purplish Grey */
+    --color-chromatic-grey-light: #D8CEDE;
+    --color-bronze: #CD7F32;
+    --color-bronze-dark: #A97142;
+
+    --color-silver: #E5E5E5;
+    --color-chromatic: #7A687F;
+    /* Deeper purple base */
+
+    /* Mapping old variables to new palette for backwards compatibility if needed, 
+     or just redefining the main accent vars used in components */
+    --color-gold: var(--color-chromatic-grey);
+    --color-gold-light: var(--color-chromatic-grey-light);
+    --color-gold-dark: var(--color-bronze);
+    /* Bronze takes the place of dark gold/contrast */
+
+    --font-headline: var(--font-playfair), serif;
+    --font-sans: var(--font-manrope), sans-serif;
+
+    /* Updated Gradient: Chromatic Grey to Bronze */
+    --background-image-gold-sheen: linear-gradient(135deg, var(--color-bronze) 0%, var(--color-chromatic-grey) 50%, var(--color-chromatic-grey-light) 100%);
+    --background-image-chromatic-sheen: linear-gradient(135deg, var(--color-bronze-dark) 0%, var(--color-chromatic-grey) 50%, #E5E5E5 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Utilities */
+@utility glass-panel {
+    @apply bg-obsidian/80 backdrop-blur-md border border-white/5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility text-balance {
+    text-wrap: balance;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base Styles */
+@layer base {
+    body {
+        @apply bg-obsidian text-silver font-sans antialiased overflow-x-hidden;
+        background-color: var(--color-obsidian);
+        color: var(--color-silver);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-headline font-bold tracking-tight;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-bronze), transparent 70%);
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--color-chromatic-grey), transparent 50%);
+}
+
+/* Selection */
+::selection {
+    background-color: color-mix(in srgb, var(--color-chromatic-grey), transparent 80%);
+    color: var(--color-bronze);
+}
+
+/* Grain Texture Overlay */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    mix-blend-mode: overlay;
 }
