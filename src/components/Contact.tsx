@@ -9,8 +9,8 @@ export default function Contact() {
                 </h2>
 
                 <div className="flex flex-col gap-6 mb-16">
-                    <a href="mailto:info@4play.global" className="text-lg font-sans tracking-widest text-silver hover:text-bronze transition-colors duration-300">
-                        INFO@4PLAY.GLOBAL
+                    <a href="mailto:info@4playglobal.com" className="text-lg font-sans tracking-widest text-silver hover:text-bronze transition-colors duration-300">
+                        INFO@4PLAYGLOBAL.COM
                     </a>
                     <div className="flex justify-center gap-8 mt-4">
                         {/* Social placeholders */}

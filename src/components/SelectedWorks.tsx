@@ -9,18 +9,35 @@ const works = [
         title: "The Alchemist's Veil",
         category: "Immersive Theatre",
         image: "/images/hero-face.jpg", // Reusing for demo
+        url: null,
     },
     {
         id: 2,
         title: "Chromatica Essence",
         category: "Brand Campaign",
         image: "/images/abstract-gold.png",
+        url: null,
     },
     {
         id: 3,
         title: "Obsidian Echo",
         category: "Film Production",
         image: "/images/texture-black.jpg",
+        url: null,
+    },
+    {
+        id: 4,
+        title: "Barpan",
+        category: "Wellness & Lifestyle",
+        image: "/images/barpan-cover.jpg",
+        url: "https://barpan.4playglobal.com",
+    },
+    {
+        id: 5,
+        title: "Glazn",
+        category: "Creator Platform",
+        image: "/images/glazn-cover.jpg",
+        url: "https://glazn.com",
     },
 ];
 
@@ -59,9 +76,20 @@ export default function SelectedWorks() {
                                 <h3 className="text-4xl md:text-6xl font-headline font-bold mb-6 text-white leading-none">
                                     {work.title}
                                 </h3>
-                                <button className="text-sm font-sans tracking-widest border-b border-transparent hover:border-bronze transition-colors pb-1">
-                                    VIEW EXHIBITION
-                                </button>
+                                {work.url ? (
+                                    <a
+                                        href={work.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block text-sm font-sans tracking-widest border-b border-transparent hover:border-bronze transition-colors pb-1 cursor-pointer"
+                                    >
+                                        VISIT
+                                    </a>
+                                ) : (
+                                    <button className="text-sm font-sans tracking-widest border-b border-transparent hover:border-bronze transition-colors pb-1">
+                                        VIEW EXHIBITION
+                                    </button>
+                                )}
                             </div>
                         </motion.div>
                     ))}
