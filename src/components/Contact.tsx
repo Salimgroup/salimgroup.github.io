@@ -22,7 +22,7 @@ export default function Contact() {
                             Instagram
                         </a>
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/in/khalid-johnson-a743816/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
