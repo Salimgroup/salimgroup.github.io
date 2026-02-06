@@ -13,12 +13,22 @@ export default function Contact() {
                         INFO@4PLAYGLOBAL.COM
                     </a>
                     <div className="flex justify-center gap-8 mt-4">
-                        {/* Social placeholders */}
-                        {['Instagram', 'LinkedIn', 'Twitter'].map((social) => (
-                            <a key={social} href="#" className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors">
-                                {social}
-                            </a>
-                        ))}
+                        <a
+                            href="https://www.instagram.com/4playglobal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
+                        >
+                            Instagram
+                        </a>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
+                        >
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
 
