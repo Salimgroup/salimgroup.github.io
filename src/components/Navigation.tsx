@@ -16,6 +16,7 @@ const navItems = [
     { name: "Selected Works", href: "#works" },
     { name: "Impact", href: "#impact" },
     { name: "Contact", href: "#contact" },
+    { name: "Book", href: "https://calendly.com/barque/30min" },
 ];
 
 export default function Navigation() {
@@ -62,6 +63,8 @@ export default function Navigation() {
                         <Link
                             key={item.name}
                             href={item.href}
+                            target={item.href.startsWith("http") ? "_blank" : undefined}
+                            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                             className="group relative text-xs font-sans font-medium tracking-[0.2em] uppercase text-white/80 transition-colors duration-300 hover:text-bronze"
                         >
                             {item.name}
@@ -70,7 +73,7 @@ export default function Navigation() {
                     ))}
                 </div>
 
-                <button 
+                <button
                     onClick={toggleMobileMenu}
                     className="md:hidden pointer-events-auto text-sm font-sans tracking-widest"
                 >
@@ -88,7 +91,7 @@ export default function Navigation() {
                         transition={{ duration: 0.3 }}
                         className="fixed inset-0 z-40 bg-black/95 backdrop-blur-sm md:hidden"
                     >
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
@@ -105,6 +108,8 @@ export default function Navigation() {
                                     <Link
                                         href={item.href}
                                         onClick={closeMobileMenu}
+                                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                                         className="text-2xl font-headline tracking-widest uppercase text-white hover:text-bronze transition-colors duration-300"
                                     >
                                         {item.name}

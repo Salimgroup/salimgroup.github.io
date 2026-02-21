@@ -12,6 +12,16 @@ export default function Contact() {
                     <a href="mailto:info@4playglobal.com" className="text-lg font-sans tracking-widest text-silver hover:text-bronze transition-colors duration-300">
                         INFO@4PLAYGLOBAL.COM
                     </a>
+
+                    <a
+                        href="https://calendly.com/barque/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-sans tracking-[0.2em] text-bronze hover:text-white transition-colors duration-300 border border-bronze px-6 py-3 uppercase"
+                    >
+                        Book Consultation
+                    </a>
+
                     <div className="flex justify-center gap-8 mt-4">
                         <a
                             href="https://www.instagram.com/4playglobal"
@@ -28,6 +38,25 @@ export default function Contact() {
                             className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
                         >
                             LinkedIn
+                        </a>
+                    </div>
+
+                    <div className="flex justify-center gap-8 mt-6">
+                        <a
+                            href="/Paraloop_Terms_of_Service.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
+                        >
+                            Terms of Service
+                        </a>
+                        <a
+                            href="/4PlayGlobal_Paraloop_Privacy_Policy.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-sans tracking-[0.2em] uppercase text-gray-500 hover:text-bronze transition-colors"
+                        >
+                            Privacy Policy
                         </a>
                     </div>
                 </div>
