@@ -46,16 +46,23 @@ export default function SelectedWorks() {
                 </h2>
 
                 <article className="mb-32 border-y border-bronze/25 py-12 md:py-20 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-                    <div className="bg-gradient-to-br from-bronze/15 via-obsidian to-black border border-white/10 p-8 md:p-12 aspect-[4/5] flex flex-col justify-between">
-                        <p className="text-xs tracking-[0.25em] uppercase text-bronze">Featured Production</p>
-                        <div>
-                            <p className="text-5xl md:text-7xl font-headline text-white break-words">ESSENCE</p>
-                            <p className="text-xl text-silver/70 mt-4">× Amazon Prime</p>
-                            <div className="h-px bg-bronze/40 my-8" />
-                            <p className="text-sm tracking-widest uppercase leading-relaxed text-silver/80">Digital Cover<br />& Short Interview</p>
+                    <figure>
+                        <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
+                            <Image
+                                src="/images/essence-octavia-spencer-cover.jpg"
+                                alt="ESSENCE digital cover featuring Octavia Spencer"
+                                fill
+                                sizes="(max-width: 767px) 100vw, 50vw"
+                                className="object-cover"
+                            />
+                            <div className="absolute left-4 top-4 bg-black/75 px-3 py-2 text-[10px] tracking-[0.22em] uppercase text-bronze backdrop-blur-sm">
+                                Featured Production
+                            </div>
                         </div>
-                        <p className="text-xs tracking-widest uppercase text-bronze">4Play Global + Apt 5F</p>
-                    </div>
+                        <figcaption className="mt-3 text-[10px] tracking-wide text-silver/50">
+                            ESSENCE digital cover featuring Octavia Spencer. Image courtesy of ESSENCE.
+                        </figcaption>
+                    </figure>
                     <div>
                         <p className="text-xs tracking-widest uppercase text-bronze mb-4">Production Capabilities</p>
                         <h3 className="text-4xl md:text-6xl font-headline text-white leading-tight mb-6">Culture.<br />Captured with intention.</h3>
