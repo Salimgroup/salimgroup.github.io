@@ -12,9 +12,9 @@ function cn(...inputs: ClassValue[]) {
 
 const navItems = [
     { name: "Philosophy", href: "#philosophy" },
-    { name: "Consulting", href: "/consulting" },
     { name: "Selected Works", href: "#works" },
     { name: "Impact", href: "#impact" },
+    { name: "BARPAN Partnership", href: "/#consulting" },
     { name: "Contact", href: "#contact" },
     { name: "Book", href: "https://calendly.com/barque/30min" },
 ];

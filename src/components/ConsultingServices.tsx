@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const consultingServices = [
     {
@@ -53,13 +54,23 @@ export default function ConsultingServices() {
                     className="mb-16 md:mb-24"
                 >
                     <h2 className="text-xs font-sans tracking-[0.3em] uppercase text-bronze mb-4">
-                        Consulting & Strategy
+                        Consulting & Strategy — In Partnership with BARPAN
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-headline text-silver max-w-3xl leading-tight">
                         Build Bold. Think Different. <br />
                         <span className="text-transparent bg-clip-text bg-gold-sheen">Scale Beautiful.</span>
                     </h3>
                 </motion.div>
+
+                <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-16">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                        <Image src="/images/content-automation.webp" alt="AI automation and digital content production workstation" fill sizes="(max-width: 767px) 100vw, 50vw" className="object-cover" />
+                    </div>
+                    <div>
+                        <p className="text-silver/75 leading-relaxed mb-6">In partnership with BARPAN, we connect creative strategy with digital design, AI automation, and technology. Build smarter workflows, stronger brands, and content systems designed to grow.</p>
+                        <a href="https://barpan.4playglobal.com" target="_blank" rel="noopener noreferrer" className="inline-block text-xs tracking-widest text-bronze border-b border-bronze/50 pb-2 hover:text-white">EXPLORE BARPAN →</a>
+                    </div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-x-24">
                     {consultingServices.map((service, idx) => (
