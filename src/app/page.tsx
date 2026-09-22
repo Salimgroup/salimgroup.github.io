@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import Services from "@/components/Services";
+import FineArtProduction from "@/components/FineArtProduction";
 import ConsultingServices from "@/components/ConsultingServices";
 import SelectedWorks from "@/components/SelectedWorks";
 import ImpactAbout from "@/components/ImpactAbout";
@@ -14,6 +15,7 @@ export default function Home() {
             <Hero />
             <Philosophy />
             <Services />
+            <FineArtProduction />
             <SelectedWorks />
             <ImpactAbout />
             <ConsultingServices />

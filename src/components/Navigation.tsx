@@ -3,15 +3,10 @@
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
-}
 
 const navItems = [
     { name: "Philosophy", href: "#philosophy" },
+    { name: "Fine Art", href: "#fine-art" },
     { name: "Selected Works", href: "#works" },
     { name: "Impact", href: "#impact" },
     { name: "BARPAN Partnership", href: "/#consulting" },
@@ -58,7 +53,7 @@ export default function Navigation() {
                     </Link>
                 </div>
 
-                <div className="hidden md:flex items-center gap-8 pointer-events-auto">
+                <div className="hidden lg:flex items-center gap-5 xl:gap-8 pointer-events-auto">
                     {navItems.map((item) => (
                         <Link
                             key={item.name}
@@ -75,7 +70,7 @@ export default function Navigation() {
 
                 <button
                     onClick={toggleMobileMenu}
-                    className="md:hidden pointer-events-auto text-sm font-sans tracking-widest"
+                    className="lg:hidden pointer-events-auto text-sm font-sans tracking-widest"
                 >
                     {mobileMenuOpen ? "CLOSE" : "MENU"}
                 </button>
@@ -89,7 +84,7 @@ export default function Navigation() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-sm md:hidden"
+                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-sm lg:hidden"
                     >
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
