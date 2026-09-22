@@ -15,9 +15,9 @@ export default function Home() {
             <Hero />
             <Philosophy />
             <Services />
-            <FineArtProduction />
             <SelectedWorks />
             <ImpactAbout />
+            <FineArtProduction />
             <ConsultingServices />
             <Contact />
         </div>

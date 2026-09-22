@@ -6,9 +6,9 @@ import { useState } from "react";
 
 const navItems = [
     { name: "Philosophy", href: "#philosophy" },
-    { name: "Fine Art", href: "#fine-art" },
     { name: "Selected Works", href: "#works" },
     { name: "Impact", href: "#impact" },
+    { name: "Fine Art", href: "#fine-art" },
     { name: "BARPAN Partnership", href: "/#consulting" },
     { name: "Contact", href: "#contact" },
     { name: "Book", href: "https://calendly.com/barque/30min" },
