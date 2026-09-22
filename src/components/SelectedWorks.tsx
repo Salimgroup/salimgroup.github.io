@@ -49,10 +49,13 @@ export default function SelectedWorks() {
                     <figure>
                         <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
                             <Image
-                                src="/images/essence-octavia-spencer-cover.jpg"
+                                src="/images/essence-octavia-spencer-cover.webp"
                                 alt="ESSENCE digital cover featuring Octavia Spencer"
                                 fill
                                 sizes="(max-width: 767px) 100vw, 50vw"
+                                quality={78}
+                                placeholder="blur"
+                                blurDataURL="data:image/jpeg;base64,/9j/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAgEAACAgIBBQEAAAAAAAAAAAABAgADBBESEyExQVFx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oADAMBAAIRAxEAPwBsvNasBV0GbwZz4me7lks0SPc3IwbMjjYHCqPZi1rTVX0lYFwe5+zMwr0Wsx4Mdr8Mi6qbNAAfkISL/9k="
                                 className="object-cover"
                             />
                             <div className="absolute left-4 top-4 bg-black/75 px-3 py-2 text-[10px] tracking-[0.22em] uppercase text-bronze backdrop-blur-sm">
